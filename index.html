@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exchange & Translate</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <div class="tab active" onclick="switchTab('exchange')">Exchange</div>
+        <div class="tab" onclick="switchTab('translator')">Translator</div>
+      </div>
+      <div class="content">
+        <div id="exchange" class="fade-in">
+          <h2>Currency Exchange</h2>
+          <input type="number" placeholder="Amount" id="amount" />
+          <select id="from-currency">
+            <option value="PKR">PKR - Pakistani Rupee</option>
+            <option value="USD">USD - US Dollar</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="GBP">GBP - British Pound</option>
+            <option value="JPY">JPY - Japanese Yen</option>
+            <option value="AUD">AUD - Australian Dollar</option>
+            <option value="CAD">CAD - Canadian Dollar</option>
+            <option value="CHF">CHF - Swiss Franc</option>
+            <option value="CNY">CNY - Chinese Yuan</option>
+            <option value="INR">INR - Indian Rupee</option>
+            <option value="SAR">SAR - Saudi Riyal</option>
+          </select>
+          <select id="to-currency">
+            <option value="USD">USD - US Dollar</option>
+            <option value="PKR">PKR - Pakistani Rupee</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="GBP">GBP - British Pound</option>
+            <option value="JPY">JPY - Japanese Yen</option>
+            <option value="AUD">AUD - Australian Dollar</option>
+            <option value="CAD">CAD - Canadian Dollar</option>
+            <option value="CHF">CHF - Swiss Franc</option>
+            <option value="CNY">CNY - Chinese Yuan</option>
+            <option value="INR">INR - Indian Rupee</option>
+            <option value="SAR">SAR - Saudi Riyal</option>
+          </select>
+          <h3 id="result"></h3>
+          <button onclick="convertCurrency()">Convert</button>
+        </div>
+        <div id="translator" class="fade-in">
+          <h2>Text Translator</h2>
+          <textarea
+            id="text-to-translate"
+            placeholder="Enter text to translate"
+            rows="4"
+          ></textarea>
+          <select id="source-lang">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="pt">Portuguese</option>
+            <option value="ru">Russian</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+            <option value="zh">Chinese (Simplified)</option>
+          </select>
+          <select id="target-lang">
+            <option value="ur">Urdu</option>
+            <option value="es">Spanish</option>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="pt">Portuguese</option>
+            <option value="ru">Russian</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+            <option value="zh">Chinese (Simplified)</option>
+            <option value="ar">Arabic</option>
+            <option value="hi">Hindi</option>
+          </select>
+          <h3 id="translatedText"></h3>
+          <button onclick="translateText()">Translate</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
